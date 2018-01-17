@@ -1,0 +1,29 @@
+body {
+    width: 100%;
+}
+
+header{
+    display: block;
+    background: lightgreen; 
+}
+
+main #content {
+    width: 70%;
+    display: block;
+    float: left;
+    background: lightgrey; 
+    min-height: 450px;
+}
+
+main aside {
+    width: 30%;
+    display: block;
+    float: right;
+    background: lightblue;
+    min-height: 450px;
+}
+
+footer{
+    display: block;
+    background: lightyellow; 
+}
