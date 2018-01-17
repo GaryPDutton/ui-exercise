@@ -16,15 +16,15 @@
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Blogg</a></li>
-                    <li><a href="" id="side-bar-link">Side bar</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/blogg">Blogg</a></li>
+                    <li><a href="Javascript:" id="side-bar-link">Side bar</a></li>
                 </ul>
             </nav>
         </header>
                     
-        <main role="main" id="container">
-            <div id="content">
+        <main role="main" id="container" >
+            <div id="content" class="content-no-sidebar">
                 <section>
                     <img src="http://via.placeholder.com/300x150">
                     <h2>Section title</h2>
@@ -61,11 +61,12 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                 </section>
             </div>
-            <aside>Side bar</aside>
+            <aside id="side-bar" class="sidebar-not-visible">Side bar</aside>
         </main>
                     
         <footer role="contentinfo">
-            Footer
+            Created by Gary Dutton 17th January 2018
+    
         </footer>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>

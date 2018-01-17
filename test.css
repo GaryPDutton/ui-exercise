@@ -1,5 +1,6 @@
 body {
     width: 100%;
+    font-family: helvetica,arial,sans-serif;
 }
 
 header{
@@ -8,6 +9,8 @@ header{
 
 header h1 {
     text-align:center;
+    font-weight: 500;
+    font-size: 2.5em;
 }
 
 header nav{
@@ -25,26 +28,57 @@ header nav li{
     display:inline;
 }
 
-header nav a{
+header nav a {
     display:inline-block;
     border-right: 1px;
     padding:10px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.5em;
+    color: grey;
 }
 
-header nav li:first-of-type {
-    border-left: none;
+header nav a:visited {
+    color: grey;
 }
 
-header nav li:last-of-type {
-    border-bottom: none;
+header nav a:hover {
+    color: black;
+}
+
+
+main {
+    display: block;
+    padding-left: 30px;
+    padding-right: 30px;
+    min-height: 450px;
 }
 
 main #content {
     width: 70%;
     display: block;
-    float: left;
     min-height: 450px;
+    float:left;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
+
+main #content.content-no-sidebar {
+    width: 100%;
+    -webkit-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+    -moz-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+    -o-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+    transition:width 300ms ease-in-out, height 300ms ease-in-out;
+}
+
+main #content.content-with-sidebar {
+    width: 70%;
+    -webkit-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+    -moz-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+    -o-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+    transition:width 300ms ease-in-out, height 300ms ease-in-out;
+}
+
 
 main #content section {
     display: block;
@@ -53,13 +87,12 @@ main #content section {
     width: 100%;
     margin: 5px;
     padding: 10px;
-    border: 1px solid #ccc;
     height: 350px;
 }
 
 @media screen and (min-width: 640px) {
     main #content section {
-        width: 40%;
+        width: 45%;
         height: 300px;
     }
 }
@@ -67,7 +100,7 @@ main #content section {
 @media screen and (min-width: 860px) {
     main #content section {
         width: 30%;
-        height: 275px;
+        height: 300px;
     }
 }
 
@@ -76,14 +109,40 @@ main #content section img{
 }
 
 main aside {
-    width: 30%;
-    display: block;
     float: right;
     min-height: 450px;
 }
 
-footer{
+main aside.sidebar-visible{
+    display: block;
+    width: 30%;
+
+    -webkit-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+    -moz-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+    -o-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+    transition:width 300ms ease-in-out, height 300ms ease-in-out;
+}
+
+main aside.sidebar-not-visible {
+    display: none;
+    width: 0;
+
+    -webkit-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+    -moz-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+    -o-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+    transition:width 300ms ease-in-out, height 300ms ease-in-out;
+}
+
+footer {
     clear: both;
     display: block;
+    border-top: 1px solid #ccc;
+    margin-top: 30px;
+    padding-top: 30px;
+    min-height: 100px;
+    background-color: rgb(238, 238, 238);
+    text-align: center;
+    font-size: 1.5em;
+    
 }
 
